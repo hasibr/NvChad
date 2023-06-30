@@ -8,4 +8,19 @@ coc-settings.json
 .luarc.json
 lazy-lock.json
 after
-**/.DS_Store
+
+# Debug logs (npm, yarn)
+*.log
+
+# Editor artifacts (vim, VS Code, JetBrains)
+.*.sw[a-z]
+*~
+.#*
+.vscode
+.idea/
+
+# OS files
+.DS_Store*
+ehthumbs.db
+Icon?
+Thumbs.db

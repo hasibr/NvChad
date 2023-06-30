@@ -1,5 +1,6 @@
 plugin
-custom
+# Enable tracking custom configuration since this is a forked repository
+# custom
 spell
 ftplugin
 syntax

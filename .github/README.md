@@ -23,6 +23,23 @@
 
   </div>
 
+## Important
+
+This is my fork of the NvChad Neovim config. It allows me to persist my custom configuration in source control (on top of the [original NvChad project](https://github.com/NvChad/NvChad)).
+
+Note to self to keep this updated with the original project repository:
+
+```sh
+git clone git@github.com:hasibr/NvChad.git
+git remote add upstream git@github.com:NvChad/NvChad.git
+
+git fetch upstream
+git rebase upstream/v2.0
+git push --force
+```
+
+If this repository has been added as a submodule in a dotfiles project, pull in the latest changes from this repository by updating the submodule.
+
 ## Showcase
 
 <img src="https://nvchad.com/features/nvdash.webp">

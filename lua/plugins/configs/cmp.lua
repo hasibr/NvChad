@@ -75,12 +75,11 @@ local options = {
     ["<C-f>"] = cmp.mapping.scroll_docs(4),
     ["<C-Space>"] = cmp.mapping.complete(),
     ["<C-e>"] = cmp.mapping.close(),
-    -- Disable enter / carriage return (CR) for confirming selection.
-    -- Cycling through the selections (tab or shift + tab) and continuing typing is sufficient.
-    -- ["<CR>"] = cmp.mapping.confirm {
-    --   behavior = cmp.ConfirmBehavior.Insert,
-    --   select = true,
-    -- },
+    -- Do not auto-select first before confirming selection
+    ["<CR>"] = cmp.mapping.confirm {
+      -- behavior = cmp.ConfirmBehavior.Insert,
+      select = false,
+    },
     ["<Tab>"] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_next_item()

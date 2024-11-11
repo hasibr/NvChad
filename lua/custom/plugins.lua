@@ -3,7 +3,7 @@ local plugins = {
   -- server
   {
     "jose-elias-alvarez/null-ls.nvim",
-    ft = {"python"},
+    ft = {"python", "go"},
     opts = function()
       return require "custom.configs.null-ls"
     end,
@@ -43,7 +43,9 @@ local plugins = {
         -- JS / TS linter (supports linting using system or project's eslint config)
         "eslint-lsp",
         -- JS / TS formatter
-        "prettier"
+        "prettier",
+        -- Go language server
+        "gopls",
       },
     },
   },
@@ -57,5 +59,15 @@ local plugins = {
       require "custom.configs.lspconfig"
     end,
   },
+  {
+    "olexsmir/gopher.nvim",
+    ft = "go",
+    config = function(_, opts)
+      require("gopher").setup(opts)
+    end,
+    build = function()
+      vim.cmd [[silent! GoInstallDeps]]
+    end,
+  }
 }
 return plugins
